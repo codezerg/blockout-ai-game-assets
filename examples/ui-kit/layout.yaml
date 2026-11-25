@@ -1,0 +1,27 @@
+# A small UI kit. Coordinates are pixels of the 1K canvas (1024x1024 at 1:1);
+# they scale to whatever size is generated.
+# Add style_refs: [path/to/image.png] to copy the look of existing art.
+canvas: { aspect: "1:1", size: 1K, background: "#00FF00" }  # key colour, removed on extraction
+style: fantasy RPG UI, carved wood and gold trim, soft painted shading, no text
+
+pieces:
+  - id: btn_primary
+    kind: button
+    box: { x: 60, y: 60, w: 380, h: 120 }
+    prompt: wide primary button, gold trim
+  - id: btn_primary_pressed            # <id>_pressed is a state of <id>
+    kind: button
+    box: { x: 500, y: 60, w: 380, h: 120 }
+    prompt: the same button in its pressed state, darker and inset
+  - id: avatar_frame
+    kind: frame
+    box: { x: 60, y: 260, w: 260, h: 260 }
+    prompt: round portrait frame with an empty centre
+  - id: panel
+    kind: nine_slice
+    box: { x: 380, y: 260, w: 560, h: 420 }
+    prompt: parchment dialog panel, ornate corners, plain edges that can stretch
+  - id: icon_settings
+    kind: icon
+    box: { x: 60, y: 760, w: 160, h: 160 }
+    prompt: gear icon
